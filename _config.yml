@@ -1,2 +1,5 @@
-#theme: jekyll-theme-dinky
 remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+- jekyll-remote-theme
+title: Tuende Szalay's website
+show_downloads: true

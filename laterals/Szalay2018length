@@ -1,0 +1,9 @@
+@InProceedings{Szalay2018length,
+  author    = {Szalay, T{\"u}nde and Benders, Titia and Cox, Felicity and Proctor, Michael},
+  booktitle = {Proceedings of the 17th Australasian International Conference on Speech Science and Technology},
+  title     = {Production and perception of length contrast in lateral-final rimes},
+  year      = {2018},
+  address   = {Sydney, Australia},
+  editor    = {Epps, Julien and Wolfe, Joe and Smith, John and Jones, Caitlin},
+  pages     = {127–132},
+}

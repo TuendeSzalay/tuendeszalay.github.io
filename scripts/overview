@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<body>
+<p>  <p>
+
+<p> Workflow for estimating and hand correcting formant trajectories in vowels and /l/-final rimes in single words: </p>
+  <li> Brief description of the method: <a href="Szalay_etal2022_vowel_SST.pdf">  Vowel merger in Australian English lateral-final rimes: /æɔ-æ/. </a> </li>
+  <li> Script for correcting vowel- and rime boundaries: correctBoundary.Praat </li>
+  <li> Script for correcting formant estimates: formantTrajectory.Praat </li>
+  <li> Sample audio data from AusTalk with Praat textgrids, created using MAUS: sample data  </li>
+  <li> The entire workflow: </li>
+<p> Workflow for identifying target vowels in a sentence, extracting them into single files, and estimating and hand correcting formant targets: </p>
+  <li> Script for identifying vowel onset, offset, and target in continuous speech: correctBoundary.Praat </li>
+  <li> Script for extracting the previously identified vowels: correctBoundary.Praat </li>
+  <li> Script for correcting formant estimates at vowel target: formantTrajectory.Praat </li>
+  <li> Sample audio data from AusTalk with Praat textgrids, created using MAUS: sample data  </li>
+  <li> The entire workflow: </li>
+</body>

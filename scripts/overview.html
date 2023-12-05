@@ -8,6 +8,36 @@ layout: default
   In these workflows, first I use <a href="https://clarin.phonetik.uni-muenchen.de/BASWebServices/interface/Pipeline"> the MAUS forced-aligner (G2P - MAUS pipeline) </a> to create a Praat textgrid with orthographic transcription and automatic phoneme-level segmentation. 
   Then, I hand-correct the automatically placed vowel- or rime boundaries, and add a landmark for the vowel target if required. Lastly, I estimate and hand-correct formants either in the entire vowel, or at the vowel target. 
   The workflow for estimating vowel trajectories uses a single-word production task, and the workflow for estimating formant targets uses a sentence-production task. The two workflows can be modified to estimate formant targets in single words or trajectories in vowels extracted from a sentence.</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky">Task \ Formant</th>
+    <th class="tg-0pky">Vowel trajectory</th>
+    <th class="tg-0pky">Vowlel target</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">Single word production</td>
+    <td class="tg-0pky">Use the workflow for trajectories.</td>
+    <td class="tg-0pky">Modify correctBoundary.Praat<br>Use the script formantTarget.Praat </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Sentence production</td>
+    <td class="tg-0pky">Modify  inSent.Praat<br>Extract the vowels using extractVowel.Praat<br><br>Use the script formantTrajectory.Praat </td>
+    <td class="tg-0pky">Use the workflow for vowel targets.</td>
+  </tr>
+</tbody>
+</table>
   
 <h2> Acoustic analysis & estimating formants </h2> 
 <p> Workflow for estimating and hand correcting formant trajectories in vowels and /l/-final rimes in single words: </p>

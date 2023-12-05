@@ -7,7 +7,8 @@ layout: default
 <p> I use Praat to estimate vowel formants at the target or in the entire vowel trajectory. I created these workflows to batch-process files to make vowel formant analysis faster and more consistent. 
   In these workflows, first I use <a href="https://clarin.phonetik.uni-muenchen.de/BASWebServices/interface/Pipeline"> the MAUS forced-aligner (G2P - MAUS pipeline) </a> to create a Praat textgrid with orthographic transcription and automatic phoneme-level segmentation. 
   Then, I hand-correct the automatically placed vowel- or rime boundaries, and add a landmark for the vowel target if required. Lastly, I estimate and hand-correct formants either in the entire vowel, or at the vowel target. 
-  The workflow for estimating vowel trajectories uses a single-word production task, and the workflow for estimating formant targets uses a sentence-production task. The two workflows can be modified to estimate formant targets in single words or trajectories in vowels extracted from a sentence.</p>
+  The workflow for estimating vowel trajectories uses a single-word production task, and the workflow for estimating formant targets uses a sentence-production task. The two workflows can be modified to estimate formant targets in single words or trajectories in vowels extracted from a sentence.
+  Some notes on how to adapt the workflow for your data can be found in the scripts.</p>
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -40,17 +41,28 @@ layout: default
 </table>
   
 <h2> Acoustic analysis & estimating formants </h2> 
-<p> Workflow for estimating and hand correcting formant trajectories in vowels and /l/-final rimes in single words: </p>
+<h3> Workflow for estimating and hand correcting formant trajectories</h3>
+ <p>This workflow takes a set of single words (one word / file) and their matching textgrids with phoneme-level alignment. 
+   The script correctBoundary.Praat provides an interface for correcting the automatically placed boundaries for vowel onset and offset.
+ The script formantTrajectory.Praat takes the hand-corrected vowel boundaries, estimates vowel formant trajectories between vowel onset and offset, and provides an interface for changing formant settings, and for hand-correcting formant estimates that do not align with the spectrogram.
+ Both scripts load your files one by one, save your edits, and track which files have been corrected. The scripts can be stopped any time: your work will be saved, and the first uncorrected file will be loaded when you re-start them.
+ Formant estimates are saved in separate csv files (one vowel / csv), in a folder called formants. </p> 
   <li> Brief description of the method: <a href="laterals/Szalay_etal2022_vowel_SST.pdf">  Vowel merger in Australian English lateral-final rimes: /æɔ-æ/. </a> </li>
   <li> Script for correcting vowel- and rime boundaries: <a href="correctBoundary.Praat"> correctBoundary.Praat </a> </li>
   <li> Script for correcting formant estimates:  <a href="formantTrajectory.Praat"> formantTrajectory.Praat </a> </li>
   <li> Sample audio data from AusTalk with Praat textgrids, created using MAUS: <a href="sound_single_word.zip"> sample data </a> </li>
   <li> The entire workflow: <a href="Praat_workflow_trajectories.zip"> two scripts, sample data, and reference paper </a>  </li>
   
-<p> Workflow for identifying target vowels in a sentence, extracting them into single files, and estimating and hand correcting formant targets: </p>
-  <li> Script for identifying vowel onset, offset, and target in a sentence: correctBoundary.Praat </li>
-  <li> Script for extracting the previously identified vowels: correctBoundary.Praat </li>
-  <li> Script for correcting formant estimates at vowel target: formantTrajectory.Praat </li>
+<h3> Workflow for estimating and hand correcting formant targets</h3>
+ <p>This workflow takes a set of sentences (one sentence / file) and their matching textgrids with phoneme-level alignment. 
+   The script correctBoundary_addTarget_inSent.Praat provides an interface for correcting the automatically placed boundaries for the onset and offset of multiple vowels, as well as for marking vowel targets.
+   The script extractVowel.Praat takes the hand-corrected vowel boundaries and extracts multiple vowels from each sentence (one vowel / file).
+ The script formantTarget.Praat takes the vowel targets and the sound files with single vowels, estimates vowel formants at the target, and provides an interface for changing formant settings, and for hand-correcting formant estimates that do not align with the spectrogram.
+ Both the correctBoundary_addTarget_inSent.Praat and formantTarget.Praat scripts load your files one by one, save your edits, and track which files have been corrected. The scripts can be stopped any time: your work will be saved, and the first uncorrected file will be loaded when you re-start them.
+ Formant estimates are saved in separate csv files (one vowel / csv), in a folder called formants. </p> 
+  <li> Script for identifying vowel onset, offset, and target in a sentence: correctBoundary_addTarget_inSent.Praat </li>
+  <li> Script for extracting the previously identified vowels: extractVowel.Praat </li>
+  <li> Script for correcting formant estimates at vowel target: formantTarget.Praat </li>
   <li> Sample audio data from AusTalk with Praat textgrids, created using MAUS: sample data  </li>
   <li> The entire workflow: </li>
   

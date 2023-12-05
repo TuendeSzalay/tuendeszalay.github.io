@@ -43,7 +43,7 @@ layout: default
 <h2> Acoustic analysis & estimating formants </h2> 
 <h3> Workflow for estimating and hand correcting formant trajectories</h3>
  <p>This workflow takes a set of single words (one word / file) and their matching textgrids with phoneme-level alignment. 
-   The script correctBoundary.Praat provides an interface for correcting the automatically placed boundaries for vowel onset and offset.
+   The script correctBoundary.Praat provides an interface for correcting the automatically placed boundaries for vowel (pre-/d/) rime (/l/-final) onset and offset.
  The script formantTrajectory.Praat takes the hand-corrected vowel boundaries, estimates vowel formant trajectories between vowel onset and offset, and provides an interface for changing formant settings, and for hand-correcting formant estimates that do not align with the spectrogram.
  Both scripts load your files one by one, save your edits, and track which files have been corrected. The scripts can be stopped any time: your work will be saved, and the first uncorrected file will be loaded when you re-start them.
  Formant estimates are saved in separate csv files (one vowel / csv), in a folder called formants. </p> 
@@ -60,11 +60,11 @@ layout: default
  The script formantTarget.Praat takes the vowel targets and the sound files with single vowels, estimates vowel formants at the target, and provides an interface for changing formant settings, and for hand-correcting formant estimates that do not align with the spectrogram.
  Both the correctBoundary_addTarget_inSent.Praat and formantTarget.Praat scripts load your files one by one, save your edits, and track which files have been corrected. The scripts can be stopped any time: your work will be saved, and the first uncorrected file will be loaded when you re-start them.
  Formant estimates are saved in separate csv files (one vowel / csv), in a folder called formants. </p> 
-  <li> Script for identifying vowel onset, offset, and target in a sentence: correctBoundary_addTarget_inSent.Praat </li>
-  <li> Script for extracting the previously identified vowels: extractVowel.Praat </li>
-  <li> Script for correcting formant estimates at vowel target: formantTarget.Praat </li>
-  <li> Sample audio data from AusTalk with Praat textgrids, created using MAUS: sample data  </li>
-  <li> The entire workflow: </li>
+  <li> Script for identifying vowel onset, offset, and target in a sentence: <a href= "correctBoundary_addTarget_inSent.Praat"> correctBoundary_addTarget_inSent.Praat </a> </li>
+  <li> Script for extracting the previously identified vowels: <a href="extractVowel.Praat"> extractVowel.Praat </a> </li>
+  <li> Script for correcting formant estimates at vowel target: <a href="formantTarget.Praat"> formantTarget.Praat </a> </li>
+  <li> Sample audio data from AusTalk with Praat textgrids, created using MAUS: <a href="sound_sentence.zip"> sample data </a> </li>
+  <li> The entire workflow: <a href="Praat_workflow_targets.zip">three scripts and sample data </a> </li>
   
 <!-- <p> Batch-processing files: coming soon <p> --> 
   

@@ -2,18 +2,31 @@
 layout: default
 ---
 <body>
-<p>  <p>
 
+<h1> Estimating vowel formants </h1> 
+<p> I use Praat to estimate vowel formants at the target or in the entire vowel trajectory. I created these workflows to batch-process files to make vowel formant analysis faster and more consistent. 
+  In these workflows, first I use <a href="https://clarin.phonetik.uni-muenchen.de/BASWebServices/interface/Pipeline"> the MAUS forced-aligner (G2P - MAUS pipeline) </a> to create a Praat textgrid with orthographic transcription and automatic phoneme-level segmentation. 
+  Then, I hand-correct the automatically placed vowel- or rime boundaries, and add a landmark for the vowel target if required. Lastly, I estimate and hand-correct formants either in the entire vowel, or at the vowel target. 
+  The workflow for estimating vowel trajectories uses a single-word production task, and the workflow for estimating formant targets uses a sentence-production task. The two workflows can be modified to estimate formant targets in single words or trajectories in vowels extracted from a sentence.</p>
+  
+<h2> Acoustic analysis & estimating formants </h2> 
 <p> Workflow for estimating and hand correcting formant trajectories in vowels and /l/-final rimes in single words: </p>
   <li> Brief description of the method: <a href="laterals/Szalay_etal2022_vowel_SST.pdf">  Vowel merger in Australian English lateral-final rimes: /æɔ-æ/. </a> </li>
   <li> Script for correcting vowel- and rime boundaries: <a href="correctBoundary.Praat"> correctBoundary.Praat </a> </li>
   <li> Script for correcting formant estimates:  <a href="formantTrajectory.Praat"> formantTrajectory.Praat </a> </li>
   <li> Sample audio data from AusTalk with Praat textgrids, created using MAUS: <a href="sound_single_word.zip"> sample data </a> </li>
   <li> The entire workflow: <a href="Praat_workflow_trajectories.zip"> two scripts, sample data, and reference paper </a>  </li>
+  
 <p> Workflow for identifying target vowels in a sentence, extracting them into single files, and estimating and hand correcting formant targets: </p>
-  <li> Script for identifying vowel onset, offset, and target in continuous speech: correctBoundary.Praat </li>
+  <li> Script for identifying vowel onset, offset, and target in a sentence: correctBoundary.Praat </li>
   <li> Script for extracting the previously identified vowels: correctBoundary.Praat </li>
   <li> Script for correcting formant estimates at vowel target: formantTrajectory.Praat </li>
   <li> Sample audio data from AusTalk with Praat textgrids, created using MAUS: sample data  </li>
   <li> The entire workflow: </li>
+  
+<!-- <p> Batch-processing files: coming soon <p> --> 
+  
+<!-- <h2> Double-checking outlier formant measurements in R and Praat: coming soon <h2> --> 
+  
+<!-- <h1> Collaborative work: coming soon <h1> --> 
 </body>

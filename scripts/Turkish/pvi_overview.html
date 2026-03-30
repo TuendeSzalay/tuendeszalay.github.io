@@ -1,1 +1,23 @@
-Coming soon
+<h1> Turkish pairwise variability index </h1> 
+<p> Three scripts are provided for</p>
+<li> Extracting target words from a single wav file, creating one wav file for each target </li>
+<li> Hand-correcting vowel boundaries in each target word </li>
+<li> Estimating vowel duration, intensity, and F0 in each target word and calculating pairwise variability index </li>
+
+<h2> Input data </h2>
+<p> Sample audio data are not provided to protect participants' privacy.
+Data are to be placed in the folder long_sound, with each participant's data placed in their own subfolder (e.g., long_sound/TDF2 for a typically-developing female child with the participant ID 2).
+The wav file is expected to contain all repetitions of all target words.
+The accompanying textgrid was generated in Phon, with expected and actual productions with broad transcription. </p>
+
+<h2> Scripts </h2>
+<p> Script 1: 1_extractWord.Praat </p>
+<p> This script extracts the pre-defined target words listed in the text files swList.txt and wsList.txt as separate wav files and saves them in the folder extracted_sounds. </p>
+
+<p> Script 2: 2_correctBoundary.Praat </p>
+<p> This script provides a Praat interface for hand-correcting vowel boundaries in the individual target words. </p>
+
+<p> Script 3: 3_correlatesOfStress.Praat </p>
+<p> This script extracts F0, intensity, and duration measures form the vowels based on the manually corrected segmentation and saves it together with speaker, word, repetition, and stress (strong-weak or weak-strong) information in a comma-separated file named as extracted_stress_measures.csv </p>
+
+<p>All scripts: Scripts 1-3</p>

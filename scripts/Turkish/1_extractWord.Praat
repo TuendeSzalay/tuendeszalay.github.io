@@ -1,4 +1,17 @@
-#Extract target words from long sound
+###############################################################################################################################################################
+## extractWord    .Praat                                                                                                                                      #
+##                                                                                                                                                            #         
+## This script provides an interface for hand-correcting vowel boundaries placed using Phon.                                       							  #
+## The script loads sound files and matching textgrids from the subfolders of the "extracted_sound" folder and tracks corrected files.                        #
+##                                                                                                                                                            #
+##                                                                                                                                                            #         
+## References:                                                                                                                                                #
+## Script by Tuende Szalay (contact at tuende0szalay@gmail.com). counterSound and counterVowelPair procedures by Titia Benders and Tuende Szalay.      		  #
+## If you used the script (as-is or modified), cite                    																						  #                                                                                                                                
+##  Noyan-Erbaş, A., Zeynep Kurada, H., Szalay, T., Karamete, A., Thomas, D., and McCabe, P. (in prep). 													  #
+##     An analysis of lexical stress production of Turkish speaking children.                                                                                 #
+###############################################################################################################################################################
+
 
 #Define directories
 sourcedir$ = "long_sound/"
